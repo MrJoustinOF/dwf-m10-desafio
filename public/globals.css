@@ -1,0 +1,18 @@
+:root {
+  --black: #000;
+  --blue: #4f7cac;
+  --lightBlue: #91e5f6;
+  --pink: #e75a7c;
+  --white: #fff;
+  --yellow: #ffc700;
+  --green: #4bae4f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}

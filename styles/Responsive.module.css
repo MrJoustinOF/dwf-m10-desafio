@@ -1,0 +1,17 @@
+.hiddenMobile {
+  display: block;
+}
+
+.hiddenDesktop {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hiddenMobile {
+    display: none;
+  }
+
+  .hiddenDesktop {
+    display: block;
+  }
+}

@@ -1,0 +1,148 @@
+.homeProducts_container {
+  background: var(--lightBlue);
+  font-size: 22px;
+  padding: 40px 0;
+}
+
+.homeProducts_title {
+  text-align: center;
+}
+
+.homeProducts {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.productCard_container {
+  display: flex;
+  justify-content: center;
+}
+
+.productCard {
+  background: var(--pink);
+  border: 4px solid #000;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px 0;
+  width: 240px;
+}
+
+.productCard_thumbnail {
+  width: 100%;
+}
+
+.productCard_info {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 0;
+}
+
+.productCard_info p {
+  font-size: 18px;
+}
+
+.item_container {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  margin: 80px 0;
+}
+
+.item_thumbnail_container {
+  display: flex;
+  justify-content: center;
+}
+
+.item_thumbnail {
+  width: 90%;
+}
+
+.item_info {
+  width: 91%;
+}
+
+.item_info_price {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.item_info_desc {
+  margin: 15px 0;
+  text-align: justify;
+}
+
+.products_results {
+  padding: 20px 50px;
+}
+
+.products_grid {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin: 20px 0;
+}
+
+.pagination_buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination_button {
+  color: var(--blue);
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: underline;
+  margin: 20px 20px;
+}
+
+.no_products_results {
+  text-align: center;
+  margin: 100px 0;
+}
+
+@media (max-width: 768px) {
+  .homeProducts_container {
+    background: var(--pink);
+  }
+
+  .homeProducts_title {
+    color: white;
+  }
+
+  .homeProducts {
+    display: block;
+  }
+
+  .item_container {
+    display: block;
+  }
+
+  .item_container {
+    margin: 0;
+    padding: 40px 20px;
+  }
+
+  .item_thumbnail {
+    width: 100%;
+  }
+
+  .item_info {
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .products_results {
+    padding: 20px 15px;
+  }
+
+  .products_grid {
+    display: block;
+  }
+
+  .pagination_buttons {
+    display: block;
+  }
+}

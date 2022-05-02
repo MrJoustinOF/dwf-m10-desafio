@@ -1,0 +1,19 @@
+.bgPink {
+  background: var(--pink);
+}
+
+.bgYellow {
+  background: var(--yellow);
+}
+
+.bgBlue {
+  background: var(--blue);
+}
+
+.bgLightBlue {
+  background: var(--lightBlue);
+}
+
+.textGreen {
+  color: var(--green);
+}

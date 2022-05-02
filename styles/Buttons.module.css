@@ -1,0 +1,16 @@
+.button {
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px 30px;
+}
+
+.submitBtn {
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 0;
+  border-radius: 8px;
+  border: none;
+}
