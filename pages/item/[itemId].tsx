@@ -3,7 +3,7 @@ import Head from "next/head";
 import { Layout } from "components/Layout";
 import { ShowItem } from "components/ShowItem";
 
-const ItemPage: NextPage = ({ item }: any) => {
+const ItemPage: NextPage = ({ desc, img, id, price, stock, title }: any) => {
   return (
     <>
       <Head>
@@ -11,7 +11,14 @@ const ItemPage: NextPage = ({ item }: any) => {
       </Head>
 
       <Layout>
-        <ShowItem item={item} />
+        <ShowItem
+          desc={desc}
+          img={img}
+          id={id}
+          price={price}
+          stock={stock}
+          title={title}
+        />
       </Layout>
     </>
   );
@@ -29,7 +36,7 @@ export const getStaticPaths = async () => {
   }));
 
   return {
-    paths,
+    paths: [],
     fallback: true,
   };
 };
@@ -39,12 +46,19 @@ export const getStaticProps = async (context: any) => {
     params: { itemId },
   } = context;
 
-  const item = await (
+  const {
+    desc,
+    img,
+    objectID: id,
+    price,
+    stock,
+    title,
+  } = await (
     await fetch(`https://m9-desafio-jous.vercel.app/api/products/${itemId}`)
   ).json();
 
   return {
-    props: { item },
+    props: { desc, img, id, price, stock, title },
   };
 };
 

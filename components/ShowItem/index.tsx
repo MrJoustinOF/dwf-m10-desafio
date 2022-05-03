@@ -4,9 +4,7 @@ import { fetcher } from "utils/fetcher";
 
 import styles from "styles/Products.module.css";
 
-export const ShowItem = ({
-  item: { objectID: id, title, desc, img, price, stock },
-}: any) => {
+export const ShowItem = ({ desc, img, id, price, stock, title }: any) => {
   const router = useRouter();
 
   const handlePurchase = async (e: any) => {
