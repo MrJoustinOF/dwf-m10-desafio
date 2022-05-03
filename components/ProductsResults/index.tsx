@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { fetcher } from "utils/fetcher";
 import { ProductCard } from "ui/cards/ProductCard";
@@ -18,7 +18,7 @@ export const ProductsResults = () => {
 
   const limit = 3;
 
-  const fetchProducts = async () => {
+  const fetchProducts = useCallback(async () => {
     const {
       query: { q },
     } = router;
@@ -35,13 +35,13 @@ export const ProductsResults = () => {
     setTotal(total);
 
     setIsLoading(false);
-  };
+  }, [offset, router]);
 
   useEffect(() => {
     if (Object.keys(router.query).includes("q")) {
       fetchProducts();
     }
-  }, [router.query, offset]);
+  }, [router.query, offset, fetchProducts]);
 
   const handleSeeMore = () => {
     setOffset(offset + limit);

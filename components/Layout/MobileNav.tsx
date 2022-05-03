@@ -13,11 +13,11 @@ export const MobileNav = ({ onClose, auth }: MobileNav) => {
       <div className={styles.mobileNav_links__container}>
         <div>
           {auth ? (
-            <Link href="/profile">
+            <Link href="/profile" passHref>
               <p className={styles.mobileNav_links}>Mi perfil</p>
             </Link>
           ) : (
-            <Link href="/signin">
+            <Link href="/signin" passHref>
               <p className={styles.mobileNav_links}>Ingresar</p>
             </Link>
           )}
@@ -34,7 +34,7 @@ export const MobileNav = ({ onClose, auth }: MobileNav) => {
             <p
               className={styles.mobileNav_auth_email}
             >{`${auth.name} ${auth.lastname}`}</p>
-            <Link href="/logout">
+            <Link href="/logout" passHref>
               <p className={styles.mobileNav_auth_logout}>Cerrar sesión</p>
             </Link>
           </div>

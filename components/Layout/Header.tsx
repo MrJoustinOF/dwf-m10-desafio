@@ -21,7 +21,7 @@ export const Header = ({ auth }: HeaderProps) => {
   return (
     <div className={styles.header_container}>
       <div className={styles.header}>
-        <Link href="/">
+        <Link href="/" passHref>
           <div className={styles.brand}>
             <ShoppingCart />
             <p style={{ marginLeft: "7px" }}>Compralo</p>
@@ -33,13 +33,13 @@ export const Header = ({ auth }: HeaderProps) => {
         {auth ? (
           <div className={styles.nav_auth}>
             <div>
-              <Link href="/profile">
+              <Link href="/profile" passHref>
                 <p
                   className={styles.nav_auth_email}
                 >{`${auth.name} ${auth.lastname}`}</p>
               </Link>
 
-              <Link href="/logout">
+              <Link href="/logout" passHref>
                 <p className={styles.nav_auth_logout}>Cerrar sesión</p>
               </Link>
             </div>

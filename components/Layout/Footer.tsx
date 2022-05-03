@@ -18,11 +18,11 @@ export const Footer = ({ auth }: FooterProps) => {
       <div className={styles.footer_links}>
         <ul className={styles.footer_navbar}>
           {auth ? (
-            <Link href="/profile">
+            <Link href="/profile" passHref>
               <li className={styles.footer_links_items}>Mi perfil</li>
             </Link>
           ) : (
-            <Link href="/signin">
+            <Link href="/signin" passHref>
               <li className={styles.footer_links_items}>Login</li>
             </Link>
           )}
@@ -32,7 +32,7 @@ export const Footer = ({ auth }: FooterProps) => {
           </li>
 
           {auth && (
-            <Link href="/logout">
+            <Link href="/logout" passHref>
               <li className={styles.footer_links_items}>Cerrar sesión</li>
             </Link>
           )}

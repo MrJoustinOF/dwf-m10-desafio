@@ -31,7 +31,7 @@ export const AddressForm = ({ user }: AddressFormProps) => {
       calle: user?.address.street,
       avenida: user?.address.avenue,
     });
-  }, [user]);
+  }, [user, setValues]);
 
   const handleAddressSubmit = async (e: any) => {
     e.preventDefault();

@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Image from "next/image";
 import { SubmitBtn } from "ui/buttons/SubmitBtn";
 import { fetcher } from "utils/fetcher";
 
@@ -11,7 +12,7 @@ export const ShowItem = ({ desc, img, id, price, stock, title }: any) => {
     e.preventDefault();
 
     if (!localStorage.getItem("token")) {
-      router.push("/");
+      router.push("/signin");
     }
 
     const apiUrl =

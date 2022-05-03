@@ -9,7 +9,7 @@ const Logout: NextPage = () => {
     localStorage.removeItem("token");
 
     router.push("/");
-  }, []);
+  }, [router]);
 
   return <div>loggin out...</div>;
 };

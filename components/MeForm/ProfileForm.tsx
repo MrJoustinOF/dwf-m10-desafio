@@ -28,7 +28,7 @@ export const ProfileForm = ({ user }: ProfileFormProps) => {
       nombre: user?.name,
       apellido: user?.lastname,
     });
-  }, [user]);
+  }, [user, setValues]);
 
   const handleProfileSubmit = async (e: any) => {
     e.preventDefault();

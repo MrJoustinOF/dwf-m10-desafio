@@ -12,7 +12,7 @@ const SignIn: NextPage = () => {
     if (localStorage.getItem("token")) {
       router.push("/");
     }
-  }, []);
+  }, [router]);
 
   return (
     <>

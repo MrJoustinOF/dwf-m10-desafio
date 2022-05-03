@@ -12,14 +12,14 @@ export const MeForm = () => {
 
   useEffect(() => {
     try {
-      if (Object.keys(error).length > 0) {
-        router.push("/");
+      if (Object.keys(error).length > 0 || !localStorage.getItem("token")) {
+        router.push("/signin");
       }
     } catch (error) {
       // something, that's it
       const ok = "ok";
     }
-  }, [error]);
+  }, [error, router]);
 
   return isLoading ? (
     <div style={{ margin: "100px 0" }}>
