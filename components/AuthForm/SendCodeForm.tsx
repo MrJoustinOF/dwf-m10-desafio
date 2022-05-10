@@ -29,7 +29,7 @@ export const SendCodeForm = ({
 
     const { email } = values;
 
-    if (!/^\w+@\w+\.\w+$/.test(email)) {
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
       errs.push("El email es invalido");
     }
 
